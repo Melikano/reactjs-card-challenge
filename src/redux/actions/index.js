@@ -19,8 +19,24 @@ export const getCards = () => dispatch => {
     .get(urls.CARD_URL)
     .then(response => {
       dispatch(setCards(response.data.cards));
+      dispatch(changeCard());
     })
     .catch(error => {
       dispatch(failedCards(error));
     });
 };
+export const changeCard = () => (dispatch, getState) => {
+  const { cards } = getState();
+  let random = Math.floor(Math.random() * cards.data.length);
+  console.log("rand=" + random);
+  dispatch(setCurrentCard(random));
+  dispatch(setCurrentTheme(cards.data[random].tag));
+};
+export const setCurrentCard = cardNumber => ({
+  type: actionTypes.SET_CURRENT_CARD,
+  cardNumber
+});
+export const setCurrentTheme = theme => ({
+  type: actionTypes.SET_CURRENT_THEME,
+  theme
+});

@@ -1,0 +1,9 @@
+.try-button {
+  width: 50%;
+  height: 3rem;
+  margin: 2% 0 3% 0;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(4, 204, 51);
+  color: white;
+}

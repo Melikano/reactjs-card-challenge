@@ -1,0 +1,16 @@
+.card-header {
+  background-color: rgb(26, 123, 193);
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 5% 2% 5%;
+}
+
+.headerIcon {
+  color: rgb(170, 206, 232);
+  font-size: 1.5rem;
+}
+
+.headerTitle {
+  color: white;
+  font-size: 0.9rem;
+}

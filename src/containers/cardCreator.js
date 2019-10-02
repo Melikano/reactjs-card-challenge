@@ -5,8 +5,8 @@ const cardCreator = Card => {
       super(props);
       this.state = { content: "" };
     }
-    componentDidMount() {
-      const { card } = this.props;
+    componentWillReceiveProps(nextProps) {
+      const { card } = nextProps;
       console.log(card.code);
       switch (card.code) {
         case 0:
@@ -23,7 +23,7 @@ const cardCreator = Card => {
 
     addImage(iamgeUrl) {
       console.log(iamgeUrl);
-      this.setState({ content: <img src={iamgeUrl} /> });
+      this.setState({ content: <img src={iamgeUrl} width="100%" height="80%"/> });
     }
 
     addSound(soundUrl) {
@@ -39,7 +39,7 @@ const cardCreator = Card => {
     }
 
     addAnimation() {
-      this.setState("an animation");
+      this.setState({content: "an animation"});
     }
 
     render() {
