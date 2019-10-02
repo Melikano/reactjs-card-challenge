@@ -1,9 +1,7 @@
 import React from "react";
 import { getCards } from "../redux/actions";
 import { connect } from "react-redux";
-import cardCreator from "../components/Card/cardCreator";
-import Card from "../components/Card/Card";
-import pictureCardCreator from "../components/Card/pictureCardCreator";
+import WrappedCard from "../components/Card/Card";
 class CardContainer extends React.Component {
   componentDidMount() {
     this.props.getCards();
@@ -15,11 +13,7 @@ class CardContainer extends React.Component {
     if (cards) {
       console.log(cards[1]);
     }
-    return loading ? (
-      <p>loading...</p>
-    ) : (
-      <Card card={cards[1]} />
-    );
+    return loading ? <p>loading...</p> : <WrappedCard card={cards[2]} />;
   }
 }
 
