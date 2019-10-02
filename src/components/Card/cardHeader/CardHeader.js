@@ -1,12 +1,18 @@
-import React from "react"
-import "./CardHeader.css"
-const CardHeader = () => {
+import React from "react";
+import { connect } from "react-redux";
+import "./CardHeader.css";
+
+const CardHeader = ({ theme }) => {
   return (
-    <header className="card-header">
-      <p>header</p>
+    <header className={`card-header ${theme}`}>
+      <p>{theme}</p>
     </header>
   );
 };
-
-export default CardHeader;
-
+const mapStateToProps = state => ({
+  theme: state.currentTheme
+});
+export default connect(
+  mapStateToProps,
+  null
+)(CardHeader);

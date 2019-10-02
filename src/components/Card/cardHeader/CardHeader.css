@@ -1,5 +1,16 @@
+.sport {
+  background-color: darkblue;
+}
+
+.art {
+  background-color: purple;
+}
+
+.fun {
+  background-color: darkorange;
+}
 .card-header {
-  background-color: rgb(26, 123, 193);
+  color: white;
   display: flex;
   justify-content: space-between;
   padding: 2% 5% 2% 5%;

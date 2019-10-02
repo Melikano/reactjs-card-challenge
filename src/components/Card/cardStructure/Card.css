@@ -6,7 +6,7 @@
 }
 .card {
   width: 20rem;
-  border-width: 5px;
+  border-width: 1px;
   border: 5px solid black;
   border-radius: 5px;
 }
