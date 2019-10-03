@@ -11,8 +11,6 @@ class CardContainer extends React.Component {
     const { loading, currentCard, error } = this.props;
     return loading ? (
       <p>loading...!</p>
-    ) : error ? (
-      <p>an error</p>
     ) : (
       <WrappedCard card={currentCard} />
     );

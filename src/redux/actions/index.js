@@ -2,6 +2,7 @@ import axios from "axios";
 import actionTypes from "./actionTypes";
 import urls from "../../utils/urls";
 
+let cardId = 0;
 export const loadingCards = () => ({
   type: actionTypes.LOADING_CARDS
 });
@@ -18,7 +19,9 @@ export const getCards = () => dispatch => {
   axios
     .get(urls.CARD_URL)
     .then(response => {
-      dispatch(setCards(response.data.cards));
+      dispatch(
+        setCards(response.data.cards.map(item => ({ ...item, id: cardId++ })))
+      );
       dispatch(changeCard());
     })
     .catch(error => {
@@ -30,6 +33,7 @@ export const changeCard = () => (dispatch, getState) => {
   let random = Math.floor(Math.random() * cards.data.length);
   dispatch(setCurrentCard(cards.data[random]));
   dispatch(setCurrentTheme(cards.data[random].tag));
+  dispatch(stopEditWithoutSave());
 };
 export const setCurrentCard = card => ({
   type: actionTypes.SET_CURRENT_CARD,
@@ -44,6 +48,10 @@ export const startEdit = () => ({
   type: actionTypes.START_EDIT
 });
 
+export const stopEditWithoutSave = () => ({
+  type: actionTypes.STOP_EDIT
+});
+
 export const editTitle = newTitle => ({
   type: actionTypes.EDIT_TITLE,
   newTitle
@@ -54,6 +62,12 @@ export const editDescription = newDescription => ({
   newDescription
 });
 
-export const saveChanges = () => ({
-  type: actionTypes.SAVE_CARD
+export const saveChanges = () => (dispatch, getState) => {
+  const { currentCard } = getState();
+  dispatch(saveCard(currentCard));
+};
+
+export const saveCard = card => ({
+  type: actionTypes.SAVE_CARD,
+  card
 });

@@ -7,7 +7,6 @@ const mapDispatchToProps = dispacth => ({
 });
 
 const mapStateToProps = state => {
-  console.log(state.currentCard);
   return {
     value: state.currentCard.title,
     editable: state.editable

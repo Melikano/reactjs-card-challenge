@@ -7,6 +7,7 @@ const actionTypes = {
   START_EDIT: "START_EDIT",
   EDIT_DESCRIPTION: "EDIT_DESCRIPTION",
   EDIT_TITLE: "EDIT_TITLE",
-  SAVE_CARD: "SAVE_CARD"
+  SAVE_CARD: "SAVE_CARD",
+  STOP_EDIT: "STOP_EDIT"
 };
 export default actionTypes;

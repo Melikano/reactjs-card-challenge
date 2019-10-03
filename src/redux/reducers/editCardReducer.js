@@ -5,6 +5,8 @@ const editCardReducer = (state = false, action) => {
       return true;
     case actionTypes.SAVE_CARD:
       return false;
+    case actionTypes.STOP_EDIT:
+      return false;
     default:
       return state;
   }
