@@ -14,7 +14,7 @@ const CardHeader = ({ headerTitle, theme, editable }) => {
         </span>
         <h5 className='header-title'>{headerTitle}</h5>
       </div>
-      <RightButton />
+      <RightButton style="header-icon"/>
     </header>
   );
 };

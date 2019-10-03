@@ -1,19 +1,15 @@
 import React from "react";
 import { getCards } from "../redux/actions";
 import { connect } from "react-redux";
-import WrappedCard from "../components/Card/cardStructure/Card";
+import WrappedCard from "../components/cardStructure/Card";
 class CardContainer extends React.Component {
   componentDidMount() {
     this.props.getCards();
   }
 
   render() {
-    const { loading, currentCard, error } = this.props;
-    return loading ? (
-      <p>loading...!</p>
-    ) : (
-      <WrappedCard card={currentCard} />
-    );
+    const { loading, currentCard } = this.props;
+    return loading ? <p>loading...!</p> : <WrappedCard card={currentCard} />;
   }
 }
 

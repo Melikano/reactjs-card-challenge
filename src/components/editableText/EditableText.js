@@ -1,6 +1,6 @@
 import React from "react";
 
-const EditableText = ({ editable, value, editValue }) => {
+const EditableText = ({ editable, value, editValue, style }) => {
   return (
     <div>
       {editable ? (
@@ -10,7 +10,7 @@ const EditableText = ({ editable, value, editValue }) => {
           value={value}
         />
       ) : (
-        <p>{value}</p>
+        <p className={style}>{value}</p>
       )}
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import Animation from "../components/Card/animation"
+import Animation from "../components/animation/animation";
 const cardCreator = Card => {
   return class WrappedCard extends React.Component {
     constructor(props) {
@@ -22,7 +22,9 @@ const cardCreator = Card => {
     }
 
     addImage(iamgeUrl) {
-      this.setState({ content: <img src={iamgeUrl} width="100%" height="80%"/> });
+      this.setState({
+        content: <img src={iamgeUrl} width='100%' height='80%' />
+      });
     }
 
     addSound(soundUrl) {
@@ -38,7 +40,7 @@ const cardCreator = Card => {
     }
 
     addAnimation() {
-      this.setState({content: <Animation />});
+      this.setState({ content: <Animation /> });
     }
 
     render() {

@@ -6,7 +6,8 @@
 }
 
 .header-icon {
-  margin-top: 5%;
+  color: white;
+  font-size: 1.2em;
 }
 .header-title {
   color: white;
@@ -16,5 +17,4 @@
 
 .header-left {
   display: flex;
-  font-size: 1.2em;
 }

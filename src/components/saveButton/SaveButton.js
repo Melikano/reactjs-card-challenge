@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import { saveChanges } from "../../../redux/actions";
+import { saveChanges } from "../../redux/actions";
 
-const SaveButton = ({ save }) => {
+const SaveButton = ({ save, style }) => {
   return (
-    <button onClick={() => save()}>
+    <button onClick={() => save()} className={style}>
       <i class='fas fa-save'></i>
     </button>
   );

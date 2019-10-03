@@ -1,7 +1,11 @@
 import currentCardReducer from "./currentCardReducer";
 import actionTypes from "../actions/actionTypes";
 import expect from "expect";
-import { mockData, editedTitleCard, editedDescriptionCard } from "./testMocks";
+import {
+  mockData,
+  editedTitleCard,
+  editedDescriptionCard
+} from "../../mocks/testMocks";
 
 describe("cards reducer", () => {
   it("should return initial state", () => {
