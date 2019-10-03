@@ -5,6 +5,7 @@ const EditableText = ({ editable, value, editValue, style }) => {
     <div>
       {editable ? (
         <input
+          className={style}
           type='text'
           onChange={event => editValue(event.target.value)}
           value={value}
