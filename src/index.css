@@ -16,14 +16,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.sport {
+.blue {
   background-color: rgba(0, 0, 139, 0.719);
 }
 
-.art {
+.green {
   background-color: rgb(4, 204, 51);
 }
 
-.fun {
+.orange {
   background-color: rgb(250, 142, 0);
+}
+
+.gray {
+  background-color: rgb(117, 117, 117);
 }

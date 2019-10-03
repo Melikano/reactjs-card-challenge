@@ -5,8 +5,16 @@
   padding: 2%;
 }
 
+.header-icon {
+  margin-top: 5%;
+}
 .header-title {
   color: white;
   font-size: 1.2em;
-  margin: 1%;
+  margin: 1% 0 0 10%;
+}
+
+.header-left {
+  display: flex;
+  font-size: 1.2em;
 }

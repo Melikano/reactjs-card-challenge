@@ -1,6 +1,7 @@
 import axios from "axios";
 import actionTypes from "./actionTypes";
 import urls from "../../utils/urls";
+import getTheme from "../../utils/themes";
 
 let cardId = 0;
 export const loadingCards = () => ({
@@ -32,7 +33,7 @@ export const changeCard = () => (dispatch, getState) => {
   const { cards } = getState();
   let random = Math.floor(Math.random() * cards.data.length);
   dispatch(setCurrentCard(cards.data[random]));
-  dispatch(setCurrentTheme(cards.data[random].tag));
+  dispatch(setCurrentTheme(getTheme(cards.data[random].tag)));
   dispatch(stopEditWithoutSave());
 };
 export const setCurrentCard = card => ({

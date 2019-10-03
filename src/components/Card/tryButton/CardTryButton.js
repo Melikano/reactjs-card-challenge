@@ -5,7 +5,7 @@ import "./CardTryButton.css";
 
 const CardTryButton = ({ changeCard, theme }) => {
   return (
-    <button className={`try-button ${theme}`} onClick={() => changeCard()}>
+    <button className={`try-button ${theme.color}`} onClick={() => changeCard()}>
       Try !
     </button>
   );

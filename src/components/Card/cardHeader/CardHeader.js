@@ -7,8 +7,11 @@ import "./CardHeader.css";
 const CardHeader = ({ headerTitle, theme, editable }) => {
   let RightButton = editable ? SaveButton : EditButton;
   return (
-    <header className={`card-header ${theme}`}>
-      <div>
+    <header className={`card-header ${theme.color}`}>
+      <div className='header-left'>
+        <span className="header-icon">
+          <i className={`fas ${theme.icon}`} />
+        </span>
         <h5 className='header-title'>{headerTitle}</h5>
       </div>
       <RightButton />
