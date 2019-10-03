@@ -1,0 +1,45 @@
+@keyframes bounceIn {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -30px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.animated-circle {
+  position: relative;
+  width: 2rem;
+  margin: 5px;
+  height: 2rem;
+  display: inline-block;
+  border-radius: 2rem;
+  animation: bounceIn 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.green-circle {
+  animation-delay: 2.5s;
+  background-color: rgb(128, 192, 137);
+}
+.blue-circle {
+  animation-delay: 2s;
+  background-color: cornflowerblue;
+}
+.orange-circle {
+    animation-delay: 1.5s;
+    background-color: rgb(237, 155, 100);
+  }
+.pink-circle {
+  animation-delay: 1s;
+  background-color: rgb(235, 132, 166);
+}
+.gray-circle {
+  animation-delay: 0.5s;
+  background-color: rgba(179, 176, 172, 0.849);
+}
+.yellow-circle {
+  background-color: rgb(253, 251, 136);
+}

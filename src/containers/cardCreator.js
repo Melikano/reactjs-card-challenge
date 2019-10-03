@@ -1,4 +1,5 @@
 import React from "react";
+import Animation from "../components/Card/animation"
 const cardCreator = Card => {
   return class WrappedCard extends React.Component {
     constructor(props) {
@@ -37,7 +38,7 @@ const cardCreator = Card => {
     }
 
     addAnimation() {
-      this.setState({content: "an animation"});
+      this.setState({content: <Animation />});
     }
 
     render() {
