@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 import { changeCard } from "../../../redux/actions/index";
 import "./CardTryButton.css";
 
-const CardTryButton = ({ changeCard }) => {
+const CardTryButton = ({ changeCard, theme }) => {
   return (
-    <button className='try-button' onClick={() => changeCard()}>
+    <button className={`try-button ${theme}`} onClick={() => changeCard()}>
       Try !
     </button>
   );
@@ -13,7 +13,10 @@ const CardTryButton = ({ changeCard }) => {
 const mapDispatchToProps = dispatch => ({
   changeCard: () => dispatch(changeCard())
 });
+const mapStateToProps = state => ({
+  theme: state.currentTheme
+});
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(CardTryButton);

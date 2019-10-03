@@ -7,7 +7,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.sport {
+  background-color: rgba(0, 0, 139, 0.719);
+}
+
+.art {
+  background-color: rgb(4, 204, 51);
+}
+
+.fun {
+  background-color: rgb(250, 142, 0);
 }

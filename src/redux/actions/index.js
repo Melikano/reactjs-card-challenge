@@ -28,15 +28,32 @@ export const getCards = () => dispatch => {
 export const changeCard = () => (dispatch, getState) => {
   const { cards } = getState();
   let random = Math.floor(Math.random() * cards.data.length);
-  console.log("rand=" + random);
-  dispatch(setCurrentCard(random));
+  dispatch(setCurrentCard(cards.data[random]));
   dispatch(setCurrentTheme(cards.data[random].tag));
 };
-export const setCurrentCard = cardNumber => ({
+export const setCurrentCard = card => ({
   type: actionTypes.SET_CURRENT_CARD,
-  cardNumber
+  card
 });
 export const setCurrentTheme = theme => ({
   type: actionTypes.SET_CURRENT_THEME,
   theme
+});
+
+export const startEdit = () => ({
+  type: actionTypes.START_EDIT
+});
+
+export const editTitle = newTitle => ({
+  type: actionTypes.EDIT_TITLE,
+  newTitle
+});
+
+export const editDescription = newDescription => ({
+  type: actionTypes.EDIT_DESCRIPTION,
+  newDescription
+});
+
+export const saveChanges = () => ({
+  type: actionTypes.SAVE_CARD
 });

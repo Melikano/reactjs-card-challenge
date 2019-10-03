@@ -1,13 +1,14 @@
 import React from "react";
-import './CardBody.css'
+import CardTitle from "../../../containers/CardTitle";
+import CardDescription from "../../../containers/CardDescription";
+import "./CardBody.css";
 
-const CardBody = ({ title, description, content }) => {
-  console.log(title);
+const CardBody = ({ content }) => {
   return (
-    <main className="card-body">
-      <h1>{title}</h1>
-      <p>{description}</p>
-      {content}
+    <main className='card-body'>
+      <CardTitle />
+      <CardDescription />
+      <div>{content}</div>
     </main>
   );
 };

@@ -8,14 +8,13 @@ class CardContainer extends React.Component {
   }
 
   render() {
-    const { cards, loading, currentCard, error } = this.props;
-    console.log(error);
+    const { loading, currentCard, error } = this.props;
     return loading ? (
       <p>loading...!</p>
     ) : error ? (
       <p>an error</p>
     ) : (
-      <WrappedCard card={cards[currentCard]} />
+      <WrappedCard card={currentCard} />
     );
   }
 }
@@ -25,7 +24,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  cards: state.cards.data,
   loading: state.cards.loading,
   error: state.cards.error,
   currentCard: state.currentCard

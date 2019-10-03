@@ -1,27 +1,12 @@
-.sport {
-  background-color: darkblue;
-}
-
-.art {
-  background-color: purple;
-}
-
-.fun {
-  background-color: darkorange;
-}
 .card-header {
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 2% 5% 2% 5%;
+  padding: 2%;
 }
 
-.headerIcon {
-  color: rgb(170, 206, 232);
-  font-size: 1.5rem;
-}
-
-.headerTitle {
+.header-title {
   color: white;
-  font-size: 0.9rem;
+  font-size: 1.2em;
+  margin: 1%;
 }

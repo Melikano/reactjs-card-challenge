@@ -7,7 +7,6 @@ const cardCreator = Card => {
     }
     componentWillReceiveProps(nextProps) {
       const { card } = nextProps;
-      console.log(card.code);
       switch (card.code) {
         case 0:
           this.addImage.bind(this)(card.image);
@@ -22,7 +21,6 @@ const cardCreator = Card => {
     }
 
     addImage(iamgeUrl) {
-      console.log(iamgeUrl);
       this.setState({ content: <img src={iamgeUrl} width="100%" height="80%"/> });
     }
 
