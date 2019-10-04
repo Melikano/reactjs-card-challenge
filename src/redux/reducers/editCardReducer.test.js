@@ -2,7 +2,7 @@ import editCardReducer from "./editCardReducer";
 import actionTypes from "../actions/actionTypes";
 import expect from "expect";
 
-describe("cards reducer", () => {
+describe("edit card reducer", () => {
   it("should return initial state", () => {
     const testAction = { type: "" };
     expect(editCardReducer(false, testAction)).toEqual(false);

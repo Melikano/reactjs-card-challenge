@@ -7,7 +7,7 @@ import {
   editedDescriptionCard
 } from "../../mocks/testMocks";
 
-describe("cards reducer", () => {
+describe("current card reducer", () => {
   it("should return initial state", () => {
     const testAction = { type: "" };
     expect(currentCardReducer({}, testAction)).toEqual({});
